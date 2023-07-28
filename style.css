@@ -1,0 +1,147 @@
+.social img {
+    width: 23px; /* Set the desired width, e.g., 30 pixels */
+    height: 23px; /* Set the desired height, e.g., 30 pixels */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background:linear-gradient(to bottom,#491de8,#cb8631);   
+}
+.profilecard{
+    width: 400px;
+    height: 528px;
+    perspective: 900px;
+}
+.inside-profilecard{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.profilecard:hover .inside-profilecard{
+    transform: rotateY(180deg);
+}
+.front-profilecard,
+.back-profilecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 24px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.4) ;
+
+}
+
+.front-profilecard{
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.front-profilecard .title{
+    position: absolute;
+    bottom: 30px;
+    right: 8px;
+}
+.front-profilecard .title h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+.front-profilecard .title span{
+    font-size: 14px;
+    color: #d2cfcf;
+}
+.back-profilecard{
+    background: #fff;
+    color: #000;
+    display: flex;
+    transform: rotateY(180deg);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.profile-img{
+    width: 200px;
+    height: 200px;
+    object-fit:cover;
+    object-position: top;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.back-profilecard h3{
+    font-size:24px;
+    font-weight:600;
+}
+.back-profilecard job{
+    font-size:16px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    
+}
+.social span{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+.btns button{
+    width: 100px;
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    background: #5243ed;
+    cursor: pointer;
+}
+.btns button:hover{
+    background: #6e63e9de;
+    transition: 0.5s;
+}
+.activity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.activity span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.activity span:first-child{
+    border-right: 1px solid #e1dede;
+    padding-right: 20px;
+}
+.activity span:last-child{
+    border-right: 1px solid #e1dede;
+    padding-right: 20px;
+}
+
